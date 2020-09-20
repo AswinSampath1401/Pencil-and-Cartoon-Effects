@@ -4,21 +4,26 @@
 import cv2
 import matplotlib.pyplot as plt
 import matplotlib
+import os
+
 
 def Image(img,frame_name):
+    output_folder = "Content\Examples"
     cv2.imshow(frame_name,img)
+    cv2.imwrite(os.path.join(output_folder,frame_name+'.jpg'),img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
-# TODO - To lighten the image and apply blur and detect sharp edges 
+# TODO - To lighten the image and apply blur and detect sharp edges
+# Code reference -> https://www.youtube.com/watch?v=Dwzp9rEFOYw&t=595s
 
 
 #Function to print Image
 try:
-    path='Content\\Resource\\img5.PNG'
+    path='Content\\Resource\\img36.PNG'
     img=cv2.imread(path)
     height,width, channels = img.shape
-    print(height,width)
+    #print(height,width)
 except AttributeError as AE:
     print('----------Check Validity of Image path--------------')
     exit() 
@@ -33,10 +38,10 @@ except Exception as e:
 name = list(path.split('.'))[0] # Name of the image
 
 #Verify image 
-Image(img,'Orginal Image')
+Image(img,'Original Image')
 
 col_img = cv2.bilateralFilter(img,5,255,255)
-Image(col_img,"After Applying Bilateral Image")
+Image(col_img,"After Applying Bilateral Filter")
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 Image(gray,'Grayscaled Image')
 gray = cv2.medianBlur(gray,3)
