@@ -24,5 +24,5 @@ Blur the image thereby lightening the colors and apply suitable filters to detec
 <li><i>Bitwise And of the Image with Sharp edges and Blurred Color image will give us a nice Cartoonized Image</i></li>
 <br>
 
-### <a href='demo.md'>Click here to see demo</a>
+### <a href='Markdown\demo.md'>Click here to see demo</a>
 
