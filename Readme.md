@@ -48,6 +48,3 @@ Apply Image Blending Techniques such as Dodging and Burning and we are good to g
 <br>
 
 ### <a href='Markdown\PencilDemo.md'>Click here to see demo</a>
-
-Trying to make a verified commit
-2nd attempt
