@@ -8,19 +8,18 @@ import os
 
 
 def Image(img,frame_name):
-    output_folder = "Content\Examples"
+    output_folder = 'Output path here'        # sample ->"Content\Examples"
     cv2.imshow(frame_name,img)
     cv2.imwrite(os.path.join(output_folder,frame_name+'.jpg'),img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
 # TODO - To lighten the image and apply blur and detect sharp edges
-# Code reference -> https://www.youtube.com/watch?v=Dwzp9rEFOYw&t=595s
 
 
 #Function to print Image
 try:
-    path='Content\\Resource\\img36.PNG'
+    path='ENTER YOUR IMAGE PATH'  #sample -> Content\\Download\\Pencil Sketch\\m0 (1).jpeg
     img=cv2.imread(path)
     height,width, channels = img.shape
     #print(height,width)
@@ -51,6 +50,6 @@ Image(edges,'Getting edges')
 cartoon = cv2.bitwise_and(col_img,col_img,mask=edges)
 Image(cartoon,'Cartoon')
 filename = name + '_cartoon.png'
-#cv2.imwrite(filename,cartoon)
+cv2.imwrite(filename,cartoon)
 
 
