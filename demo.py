@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import os
 
 
-folder="Content\Resource"
-output_folder = "Content\Cartoon Theme" 
+folder="ENTER YOUR FOLDER PATH HERE"
+output_folder = "OUTPUT FOLDER PATH AFTER CREATING" 
 def cartoonify(imgagefile):
     path = os.path.join(folder,imagefile)
     img=cv2.imread(path)
@@ -44,6 +44,7 @@ images,filenames = load_images_from_folder(folder)
 count=0
 for imagefile in filenames:
     output_image = cartoonify(imagefile)
-    cv2.imwrite(os.path.join(output_folder,imagefile+'.jpg'),output_image)
+    name = list(imagefile.split('.'))[0]
+    cv2.imwrite(os.path.join(output_folder,name+'.jpg'),output_image)
     
 
