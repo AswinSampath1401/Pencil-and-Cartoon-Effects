@@ -44,8 +44,8 @@ Apply Image Blending Techniques such as Dodging and Burning and we are good to g
 <br>
 
 ### <b><u>Final  Result</b></u>
-<li><i>A nice Pencil Sketch is generated</i></li>
-<br>
+<li><i>A nice Pencil Sketch is generated</i></li> 
+<hr>
 
 ### <a href='Markdown\PencilDemo.md'>Click here to see demo</a>
 
