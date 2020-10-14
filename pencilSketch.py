@@ -2,8 +2,8 @@
 import cv2
 import os
 
-folder = 'Content\Download\Pencil Sketch'
-output_folder = 'Content\Pencil Theme\Dodge'
+folder = 'ENTER FOLDER PATH' # Sample -> 'Content\\Random_2'
+output_folder = 'Content\Pencil Theme\Dodge' #Output Folder
 
 
 def dodge(image,mask):
